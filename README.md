@@ -13,9 +13,11 @@ PS/2 Keyboard:
 VGA Controller:
 	https://eewiki.net/pages/viewpage.action?pageId=15925278 
  
-* **Chips**: 
-DS1302  - Trickle-Charge Timekeeping Chip (Maxim Integrated)
-LCD1602 - Display 16x2 with parallel interface (Noname)
+**Chips**: 
+* DS1302  - Trickle-Charge Timekeeping Chip (Maxim Integrated)
+        http://datasheets.maximintegrated.com/en/ds/DS1302.pdf
+* LCD1602 - Display 16x2 with parallel interface (Noname)
+        http://www.elecrow.com/download/LCD1602.pdf
  
 **Video**: see my channel on youtube 
 
