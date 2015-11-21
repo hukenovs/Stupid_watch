@@ -1,0 +1,15 @@
+Device: DEVKIT on Spartan3E (XC3S500E-4PQ208C)
+	http://www.sz-21eda.com/
+
+**Design Summary Report (Unilization %) XC3S500E-4PQ208C**:
+
+* Number of External IOBs                     42 out of 158    26%
+*    Number of BUFGMUXs                        4 out of 24     16%
+*    Number of DCMs                            1 out of 4      25%
+*    Number of RAMB16s                         3 out of 20     15%
+*   Number of MULT18x18s                      0 out of 20      0%
+*    Number of Slices                        993 out of 4656   21%
+*       Number of SLICEMs                     39 out of 2328    1%
+	  
+* Design statistics:
+   Minimum period: 6.666ns{1} (Maximum frequency: 150.015MHz)
