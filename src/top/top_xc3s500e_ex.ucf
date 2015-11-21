@@ -1,0 +1,118 @@
+################################################################
+##
+## Title       : top_level.ucf
+## Design      : VGA
+## Author      : Kapitanov
+## Company     : InSys
+## 
+## Version     : 1.1
+##
+################################################################
+##
+## Description:
+##
+## THIS IS THE UCF FOR MAIN PROJECT BASED ON XILINX SPARTAN3E KIT
+##
+## Device: Spartan3E: XC3S500E-FG320-4
+## Interfaces: VGA, BUTTONS K1-K5, TRIGGERS: T1-T8, LEDS: L1-L8, 
+##					LED Matrix 8x8,
+##					LCD Display 1602,
+##					TIMER Serial DS1302,
+##
+################################################################
+	
+###################################################
+################ AREA CONSTRAINTS ################# 
+###################################################
+
+###################################################
+############### I/O PORTS CONSTRAINTS ############# 
+###################################################
+
+## BUTTONS = ## K1-K5
+
+NET "KB<5>" 		LOC = "P54" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+NET "KB<4>" 		LOC = "P58" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+NET "KB<3>" 		LOC = "P57" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+NET "KB<2>" 		LOC = "P159" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+NET "KB<1>" 		LOC = "P154" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+
+## LEDS = ## LED_MATRIX
+
+## NET "LED_Y<7>" 	LOC = "P49" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+## NET "LED_Y<6>" 	LOC = "P48" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+## NET "LED_Y<5>" 	LOC = "P40" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+## NET "LED_Y<4>" 	LOC = "P50" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+## NET "LED_Y<3>" 	LOC = "P62" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+## NET "LED_Y<2>" 	LOC = "P98" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+## NET "LED_Y<1>" 	LOC = "P64" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+## NET "LED_Y<0>" 	LOC = "P63" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+
+NET "LED_X<7>" 		LOC = "P75" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+NET "LED_X<6>" 		LOC = "P78" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+NET "LED_X<5>" 		LOC = "P76" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+NET "LED_X<4>" 		LOC = "P69" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+NET "LED_X<3>" 		LOC = "P74" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+## NET "LED_X<2>" 	LOC = "P65" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+## NET "LED_X<1>" 	LOC = "P68" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+## NET "LED_X<0>" 	LOC = "P77" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+
+## Switches
+NET "RESET"			LOC = "P148" | IOSTANDARD = LVTTL | PULLUP ; ## SW<0>
+NET "PWM"			LOC = "P142" | IOSTANDARD = LVTTL | PULLUP ; ## SW<1>
+NET "LCD"			LOC = "P136" | IOSTANDARD = LVTTL | PULLUP ; ## SW<2>
+NET "START"			LOC = "P130" | IOSTANDARD = LVTTL | PULLUP ; ## SW<3> 
+NET "RESTART"		LOC = "P124" | IOSTANDARD = LVTTL | PULLUP ; ## SW<4>  
+NET "TEST_LCD"		LOC = "P118" | IOSTANDARD = LVTTL | PULLUP ; ## SW<5>  
+## NET "SW<6>"		LOC = "P110" | IOSTANDARD = LVTTL | PULLUP ;
+## NET "SW<7>"		LOC = "P43"  | IOSTANDARD = LVTTL | PULLUP ;
+
+## VGA ports
+NET "VGA_R" 		LOC = "P96" | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST ;
+NET "VGA_G" 		LOC = "P97" | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST ;
+NET "VGA_B" 		LOC = "P93" | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST ;
+NET "VGA_HSYNC" 	LOC = "P90" | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST ;
+NET "VGA_VSYNC" 	LOC = "P94" | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST ;
+ 
+## LCD ports
+NET "LCD_RS" 		LOC = "P77" | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST ;
+NET "LCD_RW" 		LOC = "P68" | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST ;
+NET "LCD_EN" 		LOC = "P65" | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST ;
+NET "LCD_DT<0>" 	LOC = "P49" | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST ;
+NET "LCD_DT<1>" 	LOC = "P48" | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST ;
+NET "LCD_DT<2>" 	LOC = "P40" | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST ;
+NET "LCD_DT<3>" 	LOC = "P50" | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST ;
+NET "LCD_DT<4>" 	LOC = "P62" | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST ;
+NET "LCD_DT<5>" 	LOC = "P98" | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST ;
+NET "LCD_DT<6>" 	LOC = "P64" | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST ;
+NET "LCD_DT<7>" 	LOC = "P63" | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST ;
+
+# SERIAL PORTS VIA HEADEX  
+NET "T_CE" 		LOC = "P147" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+NET "T_CK" 		LOC = "P146" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+NET "T_DT" 		LOC = "P145" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+
+# TEST DATA  
+NET "TST<2>" 		LOC = "P113" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+NET "TST<1>" 		LOC = "P109" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+NET "TST<0>" 		LOC = "P107" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+
+# BELL (tie to GND)
+NET "BELL"			LOC = "P89" | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST ;	
+ 
+## CLK 50 MHz
+NET "CLK" 			LOC = "P183" | IOSTANDARD = LVCMOS33 ;
+ 	
+# PS/2 KEYBOARD
+NET "PS2_CLK" 		LOC = "P99" | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST ;
+NET "PS2_DATA" 		LOC = "P100" | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST ;
+
+###################################################
+################ CLOCK CONSTRAINTS ################# 
+###################################################
+
+# Define clock period for 50 MHz oscillator
+#NET "CLK" PERIOD = 20.0ns HIGH 50%;
+
+NET "clk_in" TNM_NET = "CLK_TN" ;
+TIMESPEC TS_CLK = PERIOD "CLK_TN" 20 ns HIGH 50 %;
