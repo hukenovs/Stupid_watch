@@ -19,7 +19,7 @@ VGA Controller:
 * LCD1602 - Display 16x2 with parallel interface (Noname)
         http://www.elecrow.com/download/LCD1602.pdf
  
-**Video**: see my channel on youtube 
+**Video**: see my channel on youtube: http://www.youtube.com/watch?v=e-I3Ej0h0AY
 
 **Software**:
 * Aldec Active-HDL 9.3: 
